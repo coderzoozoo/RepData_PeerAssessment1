@@ -48,7 +48,7 @@ medianSteps2 <- median(castActivityData2$steps)
 The mean and median of total number of steps taken each day are `r meanSteps2` and `r medianSteps2` respectively.
 
 ## Are there differences in activity patterns between weekdays and weekends?
-```{r}
+```{r weekday_weekend_activity}
 library(lattice)
 wdayVec = c("Mon", "Tue", "Wed", "Thu", "Fri")
 wendVec = c("Sat", "Sun")
