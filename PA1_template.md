@@ -46,6 +46,12 @@ plot(castActivityData1$interval, castActivityData1$steps, type = "l", col = "blu
 
 ![plot of chunk avgdailysteps](figure/avgdailysteps.png) 
 
+```r
+maxStepsInterval <- castActivityData1[castActivityData1$steps == max(castActivityData1$steps), 
+    ]$interval
+```
+
+Interval 835, on average across all the days in the dataset, contains the maximum number of steps.
 
 
 ## Imputing missing values
@@ -74,7 +80,8 @@ meanSteps2 <- mean(castActivityData2$steps)
 medianSteps2 <- median(castActivityData2$steps)
 ```
 
-The mean and median of total number of steps taken each day are 1.0766 &times; 10<sup>4</sup> and 1.0766 &times; 10<sup>4</sup> respectively.
+Total number of missing values in the dataset are 2304.
+The mean and median of total number of steps taken each day are 1.0766 &times; 10<sup>4</sup> and 1.0766 &times; 10<sup>4</sup> respectively. These values are different from the values calculated without imputing the missing data. Total number of steps taken each day have been increased as a result of imputing missing data. We filled the data for missing days with the averaga values across intervals. 
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
